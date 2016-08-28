@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HomeWork-StarTower</title>
+<script>
+
+function Button1_onclick() {
+         var lineN1 = "";
+         for (var i=txt1.value; i>=0;i--) {
+          for (var k=txt1.value; k-i>=0;k--){
+          lineN1 +="&nbsp;&nbsp;";
+          }
+         for (var j=1; j<= i;j++){
+         
+          lineN1 +="*";
+          lineN1 +="&nbsp;&nbsp;";
+         }
+         lineN1 +="<br>";
+   }
+    debugA.innerHTML =lineN1;    
+           
+           var lineN2 = "";
+         for (var i=1; i<= txt1.value;i++) {
+          for (var k=txt1.value; k-i>=0;k--){
+          lineN2 +="&nbsp;&nbsp;";
+          }
+         for (var j=1; j<= i;j++){
+         
+          lineN2 +="*";
+          lineN2 +="&nbsp;&nbsp;";
+         }
+         lineN2 +="<br>";
+   }  
+    debugB.innerHTML =lineN2; 
+   
+ }
+
+
+</script>
+
+</head>
+<body>
+星星塔:
+<input type="text" id="txt1" name="txt1" value="" PlaceHolder="請輸入數字" size="40">
+<input type="button" id="Button1" name="Button1" value="點我" onclick="Button1_onclick()">
+<br><br>
+
+<div id="debugA"></div>
+<div id="debugB"></div>
+
+</body>
+</html>
